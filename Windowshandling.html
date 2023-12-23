@@ -1,0 +1,89 @@
+﻿<html>
+	
+<head>
+	<title>Windows handling</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.6.2.573">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "DxWnd.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Windowshandling");
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Windows handling</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Theconfigurationpanel.html">The configuration panel</a> &rsaquo;&rsaquo; <a href="Video.html">Video</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Video.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Video.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Colormanagement.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts8">Fix Window Frame Style: Initializes the game window with a title bar and resizeable borders. </span></p>
+<p class="rvps3"><span class="rvts8">Prevent Win Maximize: Some modern games don't actually go in fullscreen mode, but just make the window occupy the whole screen. The option intercepts Windows messages and user32 calls to avoid changing the window position and size to make it a full-screen window. </span></p>
+<p class="rvps3"><span class="rvts8">Lock win coordinates: Intercepts messages and calls that the program makes to himself to chenge its own window coordinates. In this way, though, the game window becomes fixed in position and size.</span></p>
+<p class="rvps3"><span class="rvts8">Lock win style: Intercepts messages and calls that the program makes to himself to chenge its own windowstyle. </span></p>
+<p class="rvps3"><span class="rvts8">Recover screen mode: Sets the screen mode to registry default settings. In general, DxWnd intercepts any attempt to change display settings and prevents unwanted operations, but still some programs have display settings instructions before DxWnd could possibly intercept them (e.g. before the window is created and the windows hook is invoked), so that chaanging the display settings right after is the only possible solution. Try this when other options don't work.</span></p>
+<p class="rvps3"><span class="rvts8">Refresh on win resize: Any decently written windows application should take care of refreshing the screen primary surface when resized, and most fullscreen games do it. Some don't (they were not suppoed to ever be resized, actually). This flag is to force a refresh (useful for “Uprising”).</span></p>
+<p class="rvps3"><span class="rvts8">Fix Parent Window: Typically, a game is started with an invisible program window, and then created a separate and child window for handling the graphic. Some games don't use the child window, but they rather use the parent one. In this case, the parent window becomes visible, then needs to be properly resized. It's experimental, for now, but seems to be able to manage successfully several tough games: Solaris, SleepWalker, Sid Meier's Sim Golf, the Worms serie....</span></p>
+<p class="rvps3"><span class="rvts8">Modal Style: When "Fix Window Frame Style" is set, a borderless and titleless modal style is chosen instead of the default one.</span></p>
+<p class="rvps3"><span class="rvts8">Force win resize: Experimental (and not working very well so far): should force the processing of window resizing messages so that the window can be resized by dragging borders.</span></p>
+<p class="rvps3"><span class="rvts8">Hide multi-monitor config: Makes the program ignore that there are multiple monitors in your system configuration, giving informations about the primary monitor only.</span></p>
+<p class="rvps3"><span class="rvts8">Wallpaper mode: Experimental – forces the program Z-order to the lowest level so that it runs below any other task, like an active wallpaper.</span></p>
+<p class="rvps3"><span class="rvts8">Fix window frame in D3D: Tries to avoid D3D to render on the whole window surface including the window border. It activates a small trick that cause the program to render to a child modal surface within the main window borders.</span></p>
+<p class="rvps3"><span class="rvts8">Don't move D£D rendering window</span></p>
+<p class="rvps3"><span class="rvts8">Suppress child process creation: Suppressing the birth of child processes is necessary whenever the task is running child processes as video players, splash screens or similar things. In this case, hooking more than one process may be difficult and not worth the result.</span></p>
+<p class="rvps3"><span class="rvts8">Hide desktop background: Starts the windowized program together with four black borderless windows that surround it entirely giving a better feeling of concentration. The whole idea was borrowed from "Mr. Hide": https://sourceforge.net/projects/mrhyde/</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 by GHO. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

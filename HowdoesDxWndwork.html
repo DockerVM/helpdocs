@@ -1,0 +1,79 @@
+﻿<html>
+	
+<head>
+	<title>How does DxWnd work?</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.6.2.573">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "DxWnd.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("HowdoesDxWndwork");
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">How does DxWnd work?</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="DevelopingDxWnd.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Commandlinearguments.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts8">Well, actually there are several different ways you may write a fullscreen application, and that's why there are corresponding different ways to handle it hence some annoying configuration to do before.</span></p>
+<p class="rvps3"><span class="rvts8">Please, bear in mind that DxWnd is still an experimental program, and then its configuration is still a little clumsy. This aspect will be improved and simplified at proper time, later on. </span></p>
+<p class="rvps3"><span class="rvts8">Anyway, these are the basic principles of the DxWnd behaviour:</span></p>
+<p class="rvps3"><span class="rvts8">1. DxWnd DOES NOT alterate in any way the behaviour of your software (either system or applications) when not active. When turned off, everything behaves as if DxWnd never run on your machine, or never existed at all.</span></p>
+<p class="rvps3"><span class="rvts8">2. DxWnd DOES alterate the behaviour of your application software when running: it hooks custom code that changes the applications' behaviour, hopefully in a positive way, but you never know. It's possible that because of hacks to the directdraw or other system code there might be annoying effects such as frozen screen, unresponsive keyboard and so on. Be patient and maybe you'll find a good game setting to play without side effects.</span></p>
+<p class="rvps3"><span class="rvts8">3. This is tricky: unless you need code injection support (this will be explained later) when running, DxWnd affects ALL games in the shown list, no matter whether the cursor is highlighting a particular one, or if you started your game outside the DxWnd interface. That's why you need not activate the game from the DxWnd menu, but you could keep managing it as usual (clicking on desktop icons, shortcuts or whatsoever). So, remember this: whenever DxWnd is running, it impacts on ANY game it is configured on its game list, no matter if you didn't strt it from DxWnd interface.</span></p>
+<p class="rvps3"><span class="rvts8">4. Again, DxWnd is currently coded to make ONE SINGLE game working at a time, even if it could be possible to start and intercept more than one in parallel. In some cases, the games work together, but unpredictable things happen for instance when you try to control more than one game at a time. Maybe one day it will make it possible to play more games in parallel, but so far that feature is unsupported, so DxWnd is operating on one game (the fist started up) while the others will not be effected and should start normally in their original fullscreen mode.</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">DxWnd stores ALL its settings on a couple of configuration files (dxwnd.ini for almost everything, and dxwnd.reg for altered registry keys configuration) in the very same folder where dxwnd.exe and the hooker dxwnd.dll are located. No info is written in the registry or anywhere else in the system. No installation procedure is required, just copy the files where you like better, create your own shortcut entries wherever you like and, whenever you're satisfied with some DxWnd setting, just back-up the configuration by simply copying the dxwnd.ini file somewhere else. Also, keep in mind that ALL changes are written on disk just when DxWnd exits safely, so whenever it crashes your configuration changes are certain to be lost.</span></p>
+<p class="rvps3"><span class="rvts8">From release 2.02.22, then, it's also possible to export and import single pieces of configuration to separate files, so that people are encouraged to share working game configurations by sharing these files only.</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 by GHO. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

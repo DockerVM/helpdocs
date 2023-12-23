@@ -1,0 +1,85 @@
+﻿<html>
+	
+<head>
+	<title>DxWnd Status</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.6.2.573">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "DxWnd.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("DxWndStatus");
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">DxWnd Status</h1>
+				
+				</div>
+			<div id="topic_header_nav">
+				<a href="IOtweaks.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="TimeSlider.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts8">The DxWnd status shows the following information, updated every second:</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem24.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">DxWnd version: in the picture, the current one: 2.02.80</span></p>
+<p class="rvps3"><span class="rvts8">Hook status: either IDLE, READY or RUNNING (see tray icons)</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">When running, shows the following additional information:</span></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Running: the task name (see the configuration panel)</span></p>
+<p class="rvps3"><span class="rvts8">Screen = (width x height) colordepth, as seen by the task</span></p>
+<p class="rvps3"><span class="rvts8">FullScreen = Yes/No depending whether the task has set the cooperative level to EXCLUSIVE or not</span></p>
+<p class="rvps3"><span class="rvts8">DX Version = version of the DirectDraw / Direcr3D interface currently in use (namely, the one used to create the primary surface).</span></p>
+<p class="rvps3"><span class="rvts8">Logging = the logging flag (either ON or OFF)</span></p>
+<p class="rvps3"><span class="rvts8">Cursor = the X,Y cursor coordinates as intercepted and fixed by DxWnd</span></p>
+<p class="rvps3"><span class="rvts8">FPS = frame per second value calulated by DxWnd</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 by GHO. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

@@ -1,0 +1,83 @@
+﻿<html>
+	
+<head>
+	<title>Tweaks</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.6.2.573">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "DxWnd.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Tweaks");
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Tweaks</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Theconfigurationpanel.html">The configuration panel</a> &rsaquo;&rsaquo; <a href="Compatibility.html">Compatibility</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Compatibility.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="FakeVersion.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="3Deffects.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts8">Suppress d3d9 extensions: D3d9.dll comes in different versions depending on the platform: on older windows releases it exports the Direct3DCreate API, while in more recent versions there are many further exported calls. The flag suppresses the additional entries.</span></p>
+<p class="rvps3"><span class="rvts8">Textures not power of 2 fix: </span></p>
+<p class="rvps3"><span class="rvts8">Clean ZBUFFER @0.0 fix: </span></p>
+<p class="rvps3"><span class="rvts8">Clean ZBUFFER @1.0 fix: </span></p>
+<p class="rvps3"><span class="rvts8">Bypass font unsupported api: </span></p>
+<p class="rvps3"><span class="rvts8">Set single core process affinity: </span></p>
+<p class="rvps3"><span class="rvts8">Suppress d3d9 extensions: </span></p>
+<p class="rvps3"><span class="rvts8">Suppress IME: The flag tries to suppress IME windows, though that is not fully working yet!</span></p>
+<p class="rvps3"><span class="rvts8">Handle exceptions: Setting this flag causes DxWnd to set its own exception handler that tries (and often succeds!) to fix sevral common exceptions such as the divide by zero exception of old games that were trying to calculate the CPU speed.</span></p>
+<p class="rvps3"><span class="rvts8">Limit available resources: Makes the query for available resources (either RAM, hard disk free space and so on) to return a limited value: some old games can't handle a very big integer number and see it as a negative value, refusing to start.</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 by GHO. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

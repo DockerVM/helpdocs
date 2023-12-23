@@ -1,0 +1,79 @@
+﻿<html>
+	
+<head>
+	<title>Main</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.6.2.573">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "DxWnd.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Main");
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Main</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Theconfigurationpanel.html">The configuration panel</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Theconfigurationpanel.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Theconfigurationpanel.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Generic.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><img alt="" style="padding : 1px;" src="lib/NewItem16.png"></p>
+<p class="rvps3"><span class="rvts8"><br/></span></p>
+<p class="rvps3"><span class="rvts8">Name: The user defined program name, to allow you to label your application with an evocative naming, possibly including qualifiers, versioning etc. If unset, DxWnd will insert here the task filename.</span></p>
+<p class="rvps3"><span class="rvts8">Path: The pathname of the task to be activated / hooked.</span></p>
+<p class="rvps3"><span class="rvts8">Launch: In some cases, the program to be hooked can't be run by launching itself directly, but needs arguments or other envoronment elements provided by some frontend father program. To simplify the program activation, the frontend pathname can be written here: when set, the run command does not run the path in the field above, but this one.</span></p>
+<p class="rvps3"><span class="rvts8">Module: In some occasional cases, some dlls may get unnoticed to the DxWnd hooking logic. In these fortunately rare cases, you have a chance to make the program working by referencing here one or more module names to be added at the DxWnd search algorithm.</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 by GHO. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+

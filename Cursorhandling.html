@@ -1,0 +1,85 @@
+﻿<html>
+	
+<head>
+	<title>Cursor handling</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="HelpNDoc Personal Edition 4.6.2.573">
+	<meta name="keywords" content="">
+	
+	<link type="text/css" rel="stylesheet" media="all" href="css/reset.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/base.css" />
+	<link type="text/css" rel="stylesheet" media="all" href="css/hnd.css" />
+	<!--[if lte IE 8]>
+		<link type="text/css" rel="stylesheet" media="all" href="css/ielte8.css" />
+	<![endif]-->
+	<style type="text/css">
+		#topic_header
+		{
+			background-color: #EFEFEF;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/hnd.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			if (top.frames.length == 0)
+			{
+				var sTopicUrl = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length);
+				top.location.href = "DxWnd.html?" + sTopicUrl;
+			}
+			else if (top && top.FrameTOC && top.FrameTOC.SelectTocItem)
+			{
+				top.FrameTOC.SelectTocItem("Cursorhandling");
+			}
+		});
+	</script>
+	
+	</head>
+
+<body>
+
+<div id="topic_header">
+			<div id="topic_header_content">
+				<h1 id="topic_header_text">Cursor handling</h1>
+				
+				<div id="topic_breadcrumb">
+					<a href="Theconfigurationpanel.html">The configuration panel</a> &rsaquo;&rsaquo; <a href="Input.html">Input</a> &rsaquo;&rsaquo; </div>
+				</div>
+			<div id="topic_header_nav">
+				<a href="Input.html"><img src="img/arrow_up.png" alt="Parent"/></a>
+				
+				<a href="Input.html"><img src="img/arrow_left.png" alt="Previous"/></a>
+				
+				<a href="Keyboardhandling.html"><img src="img/arrow_right.png" alt="Next"/></a>
+				
+				</div>
+			<div class="clear"></div>
+		</div>
+	<div id="topic_content">
+		
+<p></p>
+<p class="rvps3"><span class="rvts8">Hide cursor: Forces hiding the hardware cursor.</span></p>
+<p class="rvps3"><span class="rvts8">Show Cursor: Forces showing the hardware cursor.</span></p>
+<p class="rvps3"><span class="rvts8">Correct mouse position: Compensate for X,Y mouse coordinates when the window is moved or resized. It should be typically set for most games.</span></p>
+<p class="rvps3"><span class="rvts8">Window frame compensation: In some cases, mouse X,Y coordinates appear displaced of the same amout as the window border (top and left). Checking this flag causes DxWnd to subtract this value and recover the error.</span></p>
+<p class="rvps3"><span class="rvts8">Force cursor clipping: Set hardware cursor clipping within the window's region. It greately improves the game playability in some cases (namely, the Dungeon Keeper series)</span></p>
+<p class="rvps3"><span class="rvts8">Keep cursor within window: Avoid moving the cursor outside the window area. Doing so was used as “Cursor OFF” directive in some games.</span></p>
+<p class="rvps3"><span class="rvts8">Keep cursor fixed: Inhibits the SetCursorPos() API: in some cases, it affects the program's behaviour (e.g. “Necrodrome”).</span></p>
+<p class="rvps3"><span class="rvts8">Intercept GDI cursor clipping: Disables GDI clipping, avoiding unpleasant effects such as the mouse that is not free to move within the whole window.</span></p>
+<p class="rvps3"><span class="rvts8">Message processing: Most programs get X,Y mouse coordinates from &nbsp;the mouse messages or from the specific API. One tricky way to get the same info, though, is to listen from the windows message queue using PeekMessag / GetMessage, and retrieve the X,Y coordinates from ANY received message in the pt field. Checking this box make DxWnd to fix the X,Y coordinates on this uncommon situation as well (see “Uprising”).</span></p>
+<p class="rvps3"><span class="rvts8">Fix WM_NCHITTEST</span></p>
+<p class="rvps3"><span class="rvts8">Slow down mouse polling: Some old programs have this bad habit to continuously loop through the mouse status polling with no delay, using 100% of CPU time. This flag introduces a minimal and unnoticeable delay between mouse polls, saving most of CPU &nbsp;time.</span></p>
+<p class="rvps3"><span class="rvts8">Release mouse outside window: Normally, when the mouse is placed outside the window and the window keeps receiving mouse messages, the mouse cursor is placed on the corresponding window border and the program performs video scrolling or so forth. The re are some cases in which you don't want this to happen, for instance when you want to use two programs alternatively, such as a game and a keyboard simulator. Checking this flag causes DxWnd to detect the mouse outside window condition, and in this case it places the cursor right in the middle of the screen, where it is supposed to make no harm.</span></p>
+<p></p>
+</div>
+	
+	<div id="topic_footer">
+
+			<div id="topic_footer_content">
+				Copyright &copy; 2016 by GHO. All Rights Reserved.</div>
+		</div>
+	</body>
+	
+</html>
+
